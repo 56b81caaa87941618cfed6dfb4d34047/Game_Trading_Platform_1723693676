@@ -43,7 +43,8 @@ Vue.component("simple_hero_component_1723746410", {
                     
                 </div>
                 <div id="hero-image-container" class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-                    <img id="hero-image" v-registerimage="/images/metal-gear-ray.jpeg" alt="Hero Image"/>
+                    <!--<img id="hero-image" v-registerimage="/images/metal-gear-ray.jpeg" alt="Hero Image"/>-->
+                     <img id="hero-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKb7JcDPe4-gj74KcNdPxJ46TW_Yo0Im832w&s"/>
                 </div>
             </div>
         </section>            
