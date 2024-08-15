@@ -1,11 +1,7 @@
-/* Summary: The hero component contains the following two parts:
-- To the left: There is a hero title text in h1 heading. Underneath it, a hero subtitle line of text. All this text is left-aligned. Underneath this, there are two white buttons in the same line, both justified in alignment.
-- To the right: There is an image relevant to the app.
-*/
 Vue.directive('register-image', {
-  async bind(el, binding) {
+  async inserted(el, binding) { // 'inserted' makes sure the element is in the DOM
     const imagePath = binding.value;
-    console.log("_____________HERE");
+    console.log("_____________Image Path: ", imagePath);
     try {
       // Load the image from the virtual file system
       const imageData = await window.pfs.readFile(imagePath);
@@ -14,6 +10,7 @@ Vue.directive('register-image', {
 
       // Update the src attribute of the image element directly
       el.src = imageUrl;
+      console.log("_____________Image Loaded Successfully");
     } catch (error) {
       console.error(`Error loading image from path ${imagePath}:`, error);
     }
@@ -46,7 +43,7 @@ Vue.component("simple_hero_component_1723746410", {
                     
                 </div>
                 <div id="hero-image-container" class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-                    <!--<img id="hero-image" v-register-image="/images/metal-gear-ray.jpeg" /> -->
+                    <img id="hero-image" v-register-image="/images/metal-gear-ray.jpeg" alt="Hero Image"/>
                 </div>
             </div>
         </section>            
