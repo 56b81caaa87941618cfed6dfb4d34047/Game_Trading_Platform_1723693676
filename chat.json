@@ -1,5 +1,14 @@
 [
     {
+        "role": "user",
+        "content": "Add a video game themed background image",
+        "message_id": "guest16022024054052",
+        "timestamp": "15082024191113",
+        "component_file_name": "simple_header_component_1723699404",
+        "div_id": null,
+        "div_action": null
+    },
+    {
         "role": "chat_qna",
         "content": "{\"status\": \"success\", \"qna\": [{\"question 1\": \"Do you have a specific shade or hex code for the bright yellow you want for the background?\", \"option1\": \"Yes, I will provide the exact hex code.\", \"option2\": \"No, any bright yellow will do.\"}, {\"question 2\": \"Is this color change for the entire website or specific sections/pages?\", \"option1\": \"The entire website.\", \"option2\": \"Only specific sections/pages.\"}], \"input_token_count\": 257, \"output_token_count\": 99, \"time_taken\": \"0:00:03.670573\"}",
         "message_id": "guest15082024181829",
