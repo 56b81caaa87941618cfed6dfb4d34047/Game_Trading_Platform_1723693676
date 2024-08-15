@@ -43,7 +43,7 @@ Vue.component("simple_hero_component_1723746410", {
                     
                 </div>
                 <div id="hero-image-container" class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-                    <img id="hero-image" v-register-image="/images/metal-gear-ray.jpeg" alt="Hero Image"/>
+                    <img id="hero-image" v-registerimage="/images/metal-gear-ray.jpeg" alt="Hero Image"/>
                 </div>
             </div>
         </section>            
@@ -55,7 +55,7 @@ Vue.component("simple_hero_component_1723746410", {
         };
     },
     directives: {
-      register-image: {
+      registerimage: {
         inserted: function (el, binding) {
           const imagePath = `${window.miDir}/Game_Trading_Platform_1723693676/binding.value`;
           console.log("_____________Image Path: ", imagePath);
