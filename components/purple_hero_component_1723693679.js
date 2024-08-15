@@ -4,6 +4,7 @@
 3. Hero content: The main content of the landing page, including an announcement text, a hero text, a sub-hero text, and two buttons. The hero content is centered.
 */
 
+
 Vue.directive('register-image', {
   async bind(el, binding) {
     const imagePath = binding.value;
