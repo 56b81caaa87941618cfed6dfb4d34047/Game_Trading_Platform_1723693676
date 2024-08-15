@@ -36,5 +36,11 @@
         "content": "{\"status\": \"success\", \"qna\": [{\"question 1\": \"Do you want the dark red background applied site-wide or only to specific sections/pages?\", \"option1\": \"Site-wide\", \"option2\": \"Specific sections/pages\"}, {\"question 2\": \"Should the text and other elements' colors be adjusted to maintain readability and visual harmony with the new background color?\", \"option1\": \"Yes, please adjust accordingly\", \"option2\": \"No, keep the current colors for text and elements\"}], \"input_token_count\": 305, \"output_token_count\": 103, \"time_taken\": \"0:00:04.366538\"}",
         "timestamp": "15082024035035",
         "message_id": "guest15082024035027"
+    },
+    {
+        "role": "user",
+        "content": "change this background to be blood red",
+        "timestamp": "15082024052336",
+        "message_id": "guest15082024052336"
     }
 ]
