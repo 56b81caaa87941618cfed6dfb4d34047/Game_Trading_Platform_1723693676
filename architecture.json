@@ -26,5 +26,9 @@
     {
         "level": 1,
         "task_description": "change the background to be bright yellow"
+    },
+    {
+        "level": 1,
+        "task_description": "This is the user's previous chat history with this AI:\nIn the conversation, the user requested the AI to change the background to dark green. The AI acknowledged the request and confirmed the change. To proceed further, the AI asked the user to describe the project in more detail.\nAI: Got it, I will change the background to bright yellow.\nUser: change the background to be bright yellow\nAI: Got it, I'm working on making the background video game themed.\nUser: change the background to be video game themed\nAI: Got it. Working on changing the background to blood red.\nUser: change this background to be blood red\nThis is the user's current request of changes to be made: Add a video game themed background image"
     }
 ]
