@@ -1,5 +1,14 @@
 [
     {
+        "role": "chat_acknowledge",
+        "content": "Got it. Working on changing the background to blood red.",
+        "message_id": "guest15082024052336",
+        "timestamp": "15082024052336",
+        "component_file_name": "",
+        "div_id": "",
+        "div_action": ""
+    },
+    {
         "role": "user",
         "content": "change this background to be blood red",
         "message_id": "guest15082024052336",
