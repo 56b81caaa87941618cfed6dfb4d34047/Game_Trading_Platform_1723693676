@@ -31,7 +31,7 @@ Vue.component("purple_background_cta_component_1723693679", {
                     </div>
                 </div>
                 <!-- Content -->
-                <div id="content">
+                <div id="asdf">
                     <img id="asdf-image" class="max-w-none" v-register-image="/images/metal-gear-ray.jpeg" width="512" height="512">
                 </div>
             </div>
