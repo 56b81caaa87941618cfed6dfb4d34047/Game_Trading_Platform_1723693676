@@ -48,5 +48,11 @@
         "content": "Got it. Working on changing the background to blood red.",
         "timestamp": "15082024052336",
         "message_id": "guest15082024052336"
+    },
+    {
+        "role": "chat_qna",
+        "content": "{\"status\": \"success\", \"qna\": [{\"question 1\": \"Would you like the entire app's background to be changed to blood red, or are there specific sections/pages where this change should be applied?\", \"option1\": \"Change the entire app's background.\", \"option2\": \"Change the background of specific sections/pages only.\"}, {\"question 2\": \"Do you prefer a solid blood red background, or would you like to incorporate a gradient or pattern with shades of red?\", \"option1\": \"Solid blood red background.\", \"option2\": \"Background with a gradient or pattern.\"}], \"input_token_count\": 305, \"output_token_count\": 120, \"time_taken\": \"0:00:06.338400\"}",
+        "timestamp": "15082024052344",
+        "message_id": "guest15082024052336"
     }
 ]
