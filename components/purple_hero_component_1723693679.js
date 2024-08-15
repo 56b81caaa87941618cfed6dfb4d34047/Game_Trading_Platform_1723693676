@@ -26,7 +26,7 @@ Vue.directive('register-image', {
 Vue.component("purple_hero_component_1723693679", {
     template: `
     <section id="hero-section-container">
-        <div id="section-container" class="relative max-w-6xl mx-auto px-4 sm:px-6 bg-white">
+        <div id="section-container" class="relative max-w-6xl mx-auto px-4 sm:px-6 bg-yellow-300">
             <div id="hero-content-container" class="pt-32 pb-16 md:pt-52 md:pb-32">
                 <!-- Hero content -->
                 <div id="hero-content" class="max-w-3xl mx-auto text-center" style="position: relative;z-index: 1">
