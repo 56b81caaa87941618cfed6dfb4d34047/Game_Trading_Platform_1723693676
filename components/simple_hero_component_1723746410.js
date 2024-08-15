@@ -2,6 +2,24 @@
 - To the left: There is a hero title text in h1 heading. Underneath it, a hero subtitle line of text. All this text is left-aligned. Underneath this, there are two white buttons in the same line, both justified in alignment.
 - To the right: There is an image relevant to the app.
 */
+Vue.directive('register-image', {
+  async bind(el, binding) {
+    const imagePath = binding.value;
+
+    try {
+      // Load the image from the virtual file system
+      const imageData = await window.pfs.readFile(imagePath);
+      const blob = new Blob([imageData], { type: 'image/jpeg' });
+      const imageUrl = URL.createObjectURL(blob);
+
+      // Update the src attribute of the image element directly
+      el.src = imageUrl;
+    } catch (error) {
+      console.error(`Error loading image from path ${imagePath}:`, error);
+    }
+  }
+});
+
 Vue.component("simple_hero_component_1723746410", {
     template: `
         <section id="hero-section" class="bg-white dark:bg-gray-900 flex-1">
