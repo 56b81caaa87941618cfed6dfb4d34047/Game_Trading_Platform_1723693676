@@ -1,5 +1,14 @@
 [
     {
+        "role": "user",
+        "content": "change the background to be bright yellow",
+        "message_id": "guest15082024181829",
+        "timestamp": "15082024181829",
+        "component_file_name": "purple_hero_component_1723693679",
+        "div_id": "",
+        "div_action": ""
+    },
+    {
         "role": "chat_acknowledge",
         "content": "Got it, I'm working on making the background video game themed.",
         "message_id": "guest15082024165541",
