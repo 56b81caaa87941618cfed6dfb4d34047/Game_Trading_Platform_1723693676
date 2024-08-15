@@ -4,6 +4,24 @@
 3. Hero content: The main content of the landing page, including an announcement text, a hero text, a sub-hero text, and two buttons. The hero content is centered.
 */
 
+Vue.directive('register-image', {
+  async bind(el, binding) {
+    const imagePath = binding.value;
+
+    try {
+      // Load the image from the virtual file system
+      const imageData = await window.pfs.readFile(imagePath);
+      const blob = new Blob([imageData], { type: 'image/jpeg' });
+      const imageUrl = URL.createObjectURL(blob);
+
+      // Update the src attribute of the image element directly
+      el.src = imageUrl;
+    } catch (error) {
+      console.error(`Error loading image from path ${imagePath}:`, error);
+    }
+  }
+});
+
 Vue.component("purple_hero_component_1723693679", {
     template: `
     <section id="hero-section-container">
@@ -11,6 +29,7 @@ Vue.component("purple_hero_component_1723693679", {
             <div id="hero-content-container" class="pt-32 pb-16 md:pt-52 md:pb-32">
                 <!-- Hero content -->
                 <div id="hero-content" class="max-w-3xl mx-auto text-center" style="position: relative;z-index: 1">
+                    <img id="asdf-image" class="max-w-none" v-register-image="/images/metal-gear-ray.jpeg" width="512" height="512">
                     <div id="announcement-text" class="mb-6" data-aos="fade-down"><div id="announcement-text-inner" class="flex relative before:absolute before:inset-0 before:blur-md" :class="announcementTextStyle"><a id="announcement-link" class="flex-1 btn-sm py-0.5 transition duration-150 ease-in-out group relative before:absolute before:inset-0 before:rounded-full before:pointer-events-none shadow" href="#0" :class="[announcementLinkStyle, announcementLinkHoverStyle, announcementLinkGradientStyle, announcementLinkBeforeStyle]"><span id="announcement-link-text" class="relative inline-flex items-center">New: Trade-in feature now live! Get more value for your old games. <span id="announcement-arrow" class="tracking-normal group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1" :class="landingPageAnnouncementTextStyle">-&gt;</span></span></a></div></div>
                     <div class="flex" id="hero-text-container"><h1 id="hero-text" class="h1 bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4" data-aos="fade-down">Your One-Stop Shop for Gaming Glory</h1></div>
                     <div class="flex" id="sub-hero-text-container"><p id="sub-hero-text" class="flex-1 text-lg mb-8" data-aos="fade-down" data-aos-delay="200" :class="landingPageSubHeroTextStyle">Discover, buy, sell, and trade video games from classic consoles to cutting-edge PC titles. Join our thriving community of gamers today!</p></div>
