@@ -5,12 +5,12 @@ It is centered on the page and includes a gradient-based title, a subtitle, a pa
 Vue.component("purple_background_cta_component_1723693679", {
     template: `
     <section id="cta-section-container">
-        <div id="section-container" class="max-w-6xl mx-auto px-4 sm:px-6 bg-white">
-            <div id="content-container" class="relative px-8 py-12 md:py-20 rounded-[3rem] overflow-hidden">
+        <div id="section-container" class="max-w-6xl mx-auto px-4 sm:px-6 bg-green-900">
+            <div id="content-container" class="relative px-8 py-12 md:py-20 rounded-3xl overflow-hidden bg-green-800">
                 <!-- Radial gradient -->
                 <div id="radial-gradient" class="absolute flex items-center justify-center top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 pointer-events-none -z-10 w-1/3 aspect-square" aria-hidden="true">
-                    <div id="radial-gradient-outer" class="absolute inset-0 translate-z-0 rounded-full blur-[120px] opacity-70" :class="radialGradientPrimaryStyle"></div>
-                    <div id="radial-gradient-inner" class="absolute w-1/4 h-1/4 translate-z-0 rounded-full blur-[40px]" :class="radialGradientSecondaryStyle">
+                    <div id="radial-gradient-outer" class="absolute inset-0 translate-z-0 rounded-full blur-120 opacity-70 bg-green-700" :class="radialGradientPrimaryStyle"></div>
+                    <div id="radial-gradient-inner" class="absolute w-1/4 h-1/4 translate-z-0 rounded-full blur-40 bg-green-600" :class="radialGradientSecondaryStyle">
                     </div>
                 </div>
                 <!-- Blurred shape -->
@@ -22,10 +22,10 @@ Vue.component("purple_background_cta_component_1723693679", {
                 </div>
                 <!-- Content -->
                 <div id="content" class="max-w-3xl mx-auto text-center">
-                    <div id="content-subtitle" class="flex"><div id="content-subtitle-text" class="flex-1 font-medium bg-clip-text pb-3" :class="[transparentTextStyle, contentSubtitleStyle]">Endless titles, amazing deals, instant access</div></div>
-                    <div class="flex" id="content-title-container"><h2 id="content-title" class="flex-1 h2 bg-clip-text pb-4" :class="[transparentTextStyle, contentCtaTitleStyle]"> Level Up Your Gaming Experience</h2></div>
-                    <div class="flex" id="content-body-container"><p id="content-body" class="flex-1 text-lg mb-8" :class="[contentBodyStyle]">Discover, trade, and conquer in the ultimate video game marketplace. Join thousands of gamers and find your next adventure today!</p></div>
-                    <a id="content-cta-button" href="#0" class="btn transition duration-150 ease-in-out group" :class="[contentCtaButtonPrimaryStyle, contentCtaButtonGradientStyle, contentCtaButtonGradientStyle, contentCtaButtonHoverStyle]">Get Started <span id="content-cta-arrow" class="tracking-normal group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1" :class="contentCtaArrowStyle">-&gt;</span></a>
+                    <div id="content-subtitle" class="flex"><div id="content-subtitle-text" class="flex-1 font-medium text-green-300 pb-3" :class="[transparentTextStyle, contentSubtitleStyle]">Endless titles, amazing deals, instant access</div></div>
+                    <div class="flex" id="content-title-container"><h2 id="content-title" class="flex-1 h2 text-white pb-4" :class="[transparentTextStyle, contentCtaTitleStyle]"> Level Up Your Gaming Experience</h2></div>
+                    <div class="flex" id="content-body-container"><p id="content-body" class="flex-1 text-lg mb-8 text-green-100" :class="[contentBodyStyle]">Discover, trade, and conquer in the ultimate video game marketplace. Join thousands of gamers and find your next adventure today!</p></div>
+                    <a id="content-cta-button" href="#0" class="btn transition duration-150 ease-in-out group bg-green-500 text-white hover:bg-green-400" :class="[contentCtaButtonPrimaryStyle, contentCtaButtonGradientStyle, contentCtaButtonGradientStyle, contentCtaButtonHoverStyle]">Get Started <span id="content-cta-arrow" class="tracking-normal group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1" :class="contentCtaArrowStyle">-&gt;</span></a>
                 </div>
             </div>
         </div>
