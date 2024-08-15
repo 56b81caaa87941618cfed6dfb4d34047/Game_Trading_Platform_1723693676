@@ -1,6 +1,24 @@
 [
     {
         "role": "chat_acknowledge",
+        "content": "Got it, I will change the background to bright yellow.",
+        "message_id": "guest15082024181829",
+        "timestamp": "15082024181831",
+        "component_file_name": "",
+        "div_id": "",
+        "div_action": ""
+    },
+    {
+        "role": "user",
+        "content": "change the background to be bright yellow",
+        "message_id": "guest15082024181829",
+        "timestamp": "15082024181829",
+        "component_file_name": "purple_hero_component_1723693679",
+        "div_id": "",
+        "div_action": ""
+    },
+    {
+        "role": "chat_acknowledge",
         "content": "Got it, I'm working on making the background video game themed.",
         "message_id": "guest15082024165541",
         "timestamp": "15082024165543",
@@ -72,27 +90,9 @@
         "div_action": ""
     },
     {
-        "role": "chat_acknowledge",
-        "content": "Great, I will change the background to dark green.",
-        "message_id": "guest15082024034827",
-        "timestamp": "15082024034827",
-        "component_file_name": "",
-        "div_id": "",
-        "div_action": ""
-    },
-    {
-        "role": "user",
-        "content": "change the background to be dark green",
-        "message_id": "guest15082024034827",
-        "timestamp": "15082024034827",
-        "component_file_name": "purple_background_cta_component_1723693679",
-        "div_id": "",
-        "div_action": ""
-    },
-    {
         "role": "summary",
-        "content": "Can you describe the project a bit more?",
-        "timestamp": "15082024165543",
-        "message_id": "guest15082024165541"
+        "content": "In the conversation, the user requested the AI to change the background to dark green. The AI acknowledged the request and confirmed the change. To proceed further, the AI asked the user to describe the project in more detail.",
+        "timestamp": "15082024181831",
+        "message_id": "guest15082024181829"
     }
 ]
