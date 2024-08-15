@@ -61,7 +61,7 @@ Vue.component("simple_hero_component_1723746410", {
           console.log("_____________Image Path: ", imagePath);
           try {
             // Load the image from the virtual file system
-            const imageData = await window.pfs.readFile(imagePath);
+            const imageData = window.fs.readFile(imagePath);
             const blob = new Blob([imageData], { type: 'image/jpeg' }); 
             const imageUrl = URL.createObjectURL(blob);
 
