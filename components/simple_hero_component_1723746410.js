@@ -43,8 +43,8 @@ Vue.component("simple_hero_component_1723746410", {
                     
                 </div>
                 <div id="hero-image-container" class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-                    <!--<img id="hero-image" v-registerimage="/images/metal-gear-ray.jpeg" alt="Hero Image"/>-->
-                     <img id="hero-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKb7JcDPe4-gj74KcNdPxJ46TW_Yo0Im832w&s"/>
+                    <img id="hero-image" v-registerimage="/images/metal-gear-ray.jpeg" alt="Hero Image"/>
+                     <!--<img id="hero-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKb7JcDPe4-gj74KcNdPxJ46TW_Yo0Im832w&s"/>-->
                 </div>
             </div>
         </section>            
@@ -57,8 +57,8 @@ Vue.component("simple_hero_component_1723746410", {
     },
     directives: {
       registerimage: {
-        inserted: function (el, binding) {
-          const imagePath = `${window.miDir}/Game_Trading_Platform_1723693676/binding.value`;
+        bind: function (el, binding) {
+          const imagePath = `${window.miDir}/Game_Trading_Platform_1723693676/${binding.value}`;
           console.log("_____________Image Path: ", imagePath);
           try {
             // Load the image from the virtual file system
