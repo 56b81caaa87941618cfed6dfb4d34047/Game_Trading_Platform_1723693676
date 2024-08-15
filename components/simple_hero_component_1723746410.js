@@ -1,4 +1,4 @@
-Vue.directive('register-image', {
+/*Vue.directive('register-image', {
   async inserted(el, binding) {
     const imagePath = `${window.miDir}/Game_Trading_Platform_1723693676/binding.value`;
     console.log("_____________Image Path: ", imagePath);
@@ -15,7 +15,7 @@ Vue.directive('register-image', {
       console.error(`Error loading image from path ${imagePath}:`, error);
     }
   }
-});
+});*/
 
 Vue.component("simple_hero_component_1723746410", {
     template: `
@@ -54,4 +54,24 @@ Vue.component("simple_hero_component_1723746410", {
             tab: null,
         };
     },
+    directives: {
+      register-image: {
+        inserted: function (el, binding) {
+          const imagePath = `${window.miDir}/Game_Trading_Platform_1723693676/binding.value`;
+          console.log("_____________Image Path: ", imagePath);
+          try {
+            // Load the image from the virtual file system
+            const imageData = await window.pfs.readFile(imagePath);
+            const blob = new Blob([imageData], { type: 'image/jpeg' }); 
+            const imageUrl = URL.createObjectURL(blob);
+
+            // Update the src attribute of the image element directly
+            el.src = imageUrl;
+            console.log("_____________Image Loaded Successfully");
+          } catch (error) {
+            console.error(`Error loading image from path ${imagePath}:`, error);
+          }
+        }
+      }
+    }
 });
