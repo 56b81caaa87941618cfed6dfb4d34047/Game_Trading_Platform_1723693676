@@ -1,6 +1,23 @@
 /* Summary: The section has a blurred radial gradient background and a call-to-action (CTA) content block.
 It is centered on the page and includes a gradient-based title, a subtitle, a paragraph of text, and a button with a gradient background.
 */
+Vue.directive('register-image', {
+  async bind(el, binding) {
+    const imagePath = binding.value;
+
+    try {
+      // Load the image from the virtual file system
+      const imageData = await window.pfs.readFile(imagePath);
+      const blob = new Blob([imageData], { type: 'image/jpeg' });
+      const imageUrl = URL.createObjectURL(blob);
+
+      // Update the src attribute of the image element directly
+      el.src = imageUrl;
+    } catch (error) {
+      console.error(`Error loading image from path ${imagePath}:`, error);
+    }
+  }
+});
 
 Vue.component("purple_background_cta_component_1723693679", {
     template: `
