@@ -5,7 +5,7 @@
 Vue.directive('register-image', {
   async bind(el, binding) {
     const imagePath = binding.value;
-
+    console.log("_____________HERE");
     try {
       // Load the image from the virtual file system
       const imageData = await window.pfs.readFile(imagePath);
