@@ -1,6 +1,6 @@
 Vue.directive('register-image', {
   async inserted(el, binding) { // 'inserted' makes sure the element is in the DOM
-    const imagePath = binding.value;
+    const imagePath = `${window.miDir}/Game_Trading_Platform_1723693676/binding.value`;
     console.log("_____________Image Path: ", imagePath);
     try {
       // Load the image from the virtual file system
