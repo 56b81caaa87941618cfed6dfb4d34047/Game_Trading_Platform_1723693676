@@ -30,15 +30,8 @@ Vue.component("purple_background_cta_component_1723693679", {
                     <div id="radial-gradient-inner" class="absolute w-1/4 h-1/4 translate-z-0 rounded-full blur-40 bg-green-600" :class="radialGradientSecondaryStyle">
                     </div>
                 </div>
-                <!-- Blurred shape -->
-                <div id="blurred-shape" class="absolute bottom-0 translate-y-1/2 left-0 blur-2xl opacity-50 pointer-events-none -z-10" aria-hidden="true">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="434" height="427">
-                        <defs><linearGradient id="bs5-a" x1="19.609%" x2="50%" y1="14.544%" y2="100%"><stop offset="0%" :stop-color="stopColorPrimaryStyle" /><stop offset="100%" :stop-color="stopColorSecondaryStyle" stop-opacity="0" /></linearGradient></defs>
-                        <path fill="url(#bs5-a)" fill-rule="evenodd" d="m0 0 461 369-284 58z" transform="matrix(1 0 0 -1 0 427)" />
-                    </svg>
-                </div>
                 <!-- Content -->
-                <div id="content" class="max-w-3xl mx-auto text-center">
+                <div id="content">
                     <img id="asdf-image" class="max-w-none" v-register-image="/images/metal-gear-ray.jpeg" width="512" height="512">
                 </div>
             </div>
