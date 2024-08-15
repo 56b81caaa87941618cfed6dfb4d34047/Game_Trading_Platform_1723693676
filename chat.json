@@ -1,5 +1,14 @@
 [
     {
+        "role": "chat_acknowledge",
+        "content": "Got it, I'm working on making the background video game themed.",
+        "message_id": "guest15082024165541",
+        "timestamp": "15082024165543",
+        "component_file_name": "",
+        "div_id": "",
+        "div_action": ""
+    },
+    {
         "role": "user",
         "content": "change the background to be video game themed",
         "message_id": "guest15082024165541",
