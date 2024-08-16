@@ -1,71 +1,46 @@
-/* Summary: HTML file that describes the header section including:
-1. Site branding with a logo on the left.
-2. Desktop navigation menu with links to different pages in the middle.
-3. Desktop sign-in and sign-up links on the right.
-*/ 
-
-Vue.component("purple_header_component_1723693679", {
-    template: `
-    <header class="w-full z-30" id="header-section-container">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 bg-red-900">
-            <div class="flex items-center justify-between h-16 md:h-20">
-    
-                <div id="site-branding" class="flex-1"><a id="logo-link" class="inline-flex" href="index.html" aria-label="Cruip"><img id="logo-image" class="max-w-none" src="./images/logo.svg" width="38" height="38" alt="Stellar"></a></div>
-    
-                <nav id="desktop-navigation" class="hidden md:flex md:grow">
-    
-                    <ul id="desktop-menu-links" class="flex grow justify-center flex-wrap items-center">
-                        <li><a id="Browse Games-link" class="font-medium text-sm mx-4 lg:mx-5 transition duration-150 ease-in-out" :class="[textStylePrimary, hoverTextStylePrimary]" href="Browse Games.html">Browse Games</a></li>
-                        <li><a id="Sell Games-link" class="font-medium text-sm mx-4 lg:mx-5 transition duration-150 ease-in-out" href="Sell Games.html" :class="[textStylePrimary, hoverTextStylePrimary]">Sell Games</a></li>
-                        <li><a id="My Library-link" class="font-medium text-sm mx-4 lg:mx-5 transition duration-150 ease-in-out" href="My Library.html" :class="[textStylePrimary, hoverTextStylePrimary]">My Library</a></li>
-                        <li><a id="Community-link" class="font-medium text-sm mx-4 lg:mx-5 transition duration-150 ease-in-out" href="Community.html" :class="[textStylePrimary, hoverTextStylePrimary]">Community</a></li>
-                        <li><a id="Support-link" class="font-medium text-sm mx-4 lg:mx-5 transition duration-150 ease-in-out" href="Support.html" :class="[textStylePrimary, hoverTextStylePrimary]">Support</a></li>
-                    </ul>
-    
-                </nav>
-    
-                <ul id="desktop-sign-in-links" class="flex-1 flex justify-end items-center">
-                    <li><a id="sign-in-link" class="font-medium text-sm whitespace-nowrap transition duration-150 ease-in-out" href="signin.html" :class="[textStylePrimary, hoverTextStylePrimary]">Sign in</a></li>
-                    <li class="ml-6"><a id="sign-up-link" class="btn-sm transition duration-150 ease-in-out w-full group relative before:absolute before:inset-0 before:bg-slate-800/30 before:rounded-full before:pointer-events-none" href="signup.html" :class="[signUpButtonText, signUpButtonHover, signUpButtonGradient]"><span class="relative inline-flex items-center">Sign up <span id="sign-up-arrow" class="tracking-normal group-hover:translate-x-0.5 transition-transform duration-150 ease-in-out ml-1" :class="signUpButtonArrow">-&gt;</span></span></a></li>
-                </ul>
-    
-                <div id="mobile-menu" class="md:hidden flex items-center ml-4" x-data="{ expanded: false }">
-    
-                    <button id="hamburger-button" class="hamburger" :class="{ 'active': expanded }" @click.stop="expanded = !expanded" aria-controls="mobile-nav" :aria-expanded="expanded">
-                        <span class="sr-only">Menu</span>
-                        <svg id="hamburger-icon" class="w-5 h-5 fill-current transition duration-150 ease-in-out" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" :class="[textStylePrimary,hoverTextStylePrimary]">
-                            <rect y="2" width="20" height="2" rx="1" />
-                            <rect y="9" width="20" height="2" rx="1" />
-                            <rect y="16" width="20" height="2" rx="1" />
-                        </svg>
-                    </button>
-    
-                    <nav id="mobile-nav" class="absolute top-full z-20 left-0 w-full px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out" x-ref="mobileNav" :style="expanded ? 'max-height: ' + $refs.mobileNav.scrollHeight + 'px; opacity: 1' : 'max-height: 0; opacity: .8'" @click.outside="expanded = false" @keydown.escape.window="expanded = false" x-cloak>
-                        <ul id="mobile-nav-list" class="border border-transparent rounded-lg px-4 py-1.5" :class="signUpButtonGradient">
-                            <li><a id="mobile-Browse Games-link" class="flex font-medium text-sm py-1.5" href="Browse Games.html" :class="[textStylePrimary,hoverTextStylePrimary]">Browse Games</a></li>
-                            <li><a id="mobile-Sell Games-link" class="flex font-medium text-sm py-1.5" href="Sell Games.html" :class="[textStylePrimary,hoverTextStylePrimary]">Sell Games</a></li>
-                            <li><a id="mobile-My Library-link" class="flex font-medium text-sm py-1.5" href="My Library.html" :class="[textStylePrimary,hoverTextStylePrimary]">My Library</a></li>
-                            <li><a id="mobile-Community-link" class="flex font-medium text-sm py-1.5" href="Community.html" :class="[textStylePrimary,hoverTextStylePrimary]">Community</a></li>
-                            <li><a id="mobile-Support-link" class="flex font-medium text-sm py-1.5" href="Support.html" :class="[textStylePrimary,hoverTextStylePrimary]">Support</a></li>
-                        </ul>
-                    </nav>
-    
-                </div>
-    
-            </div>
+<template>
+  <header id="header-section" style="min-height: 190px" class="w-full">
+    <div id="nav-container" class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto" style="background-image: url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'); background-size: cover; background-position: center;">
+      <div id="nav-container" class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
+        <a id="logo-link" href="#" class="flex items-center">
+          <img id="logo-image" src="./images/logo.svg" class="h-6 mr-3 sm:h-9" alt="Landwind Logo" />
+          <span id="app-name" class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">GameXchange</span>
+        </a>
+        <div id="menu-toggle-button" class="flex items-center lg:order-2">
+          <button id="collapse-button" data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="mobile-menu-2" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg id="menu-open-icon" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+            </svg>
+            <svg id="menu-close-icon" class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
         </div>
-    </header>`,
-        data() {
-            return {
-                expanded: false, 
-                tab: null,
-                textStylePrimary: 'text-slate-300',
-                hoverTextStylePrimary: 'hover:text-white',
-                signUpButtonText: "text-slate-300",
-                signUpButtonHover: "hover:text-white",
-                signUpButtonGradient: "[background:linear-gradient(theme(colors.slate.900),_theme(colors.slate.900))_padding-box,_conic-gradient(theme(colors.slate.400),_theme(colors.slate.700)_25%,_theme(colors.slate.700)_75%,_theme(colors.slate.400)_100%)_border-box]",
-                signUpButtonArrow: "text-purple-500",
-            };
-        },
-    });
-                    
+        <div id="mobile-menu-2" class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1">
+          <ul id="nav-list" class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+            <li id="nav-item-home"><a href="#" class="block py-2 pl-3 pr-4 text-white bg-purple-700 rounded lg:bg-transparent lg:text-purple-700 lg:p-0 dark:text-white" aria-current="page">Call of Duty: Modern Warfare</a></li>
+            <li id="nav-item-1"><a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">The Legend of Zelda: Breath of the Wild</a></li>
+            <li id="nav-item-2"><a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">FIFA 23</a></li>
+            <li id="nav-item-3"><a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Minecraft</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      expanded: false,
+      tab: null,
+    };
+  },
+};
+</script>
+
+<style scoped>
+/* Add custom styles for the header if needed */
+</style>
