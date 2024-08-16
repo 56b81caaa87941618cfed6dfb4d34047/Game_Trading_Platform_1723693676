@@ -27,6 +27,20 @@
         </div>
       </div>
       <img src="https://raw.githubusercontent.com/56b81caaa87941618cfed6dfb4d34047/Game_Trading_Platform_1723693676/main/images/436f748360c8454fb5fb3e8044a169f0.jpeg" alt="Game Image" class="w-full mt-4" />
+      <div class="mt-8 p-6 bg-white rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold mb-4">Email Comments</h2>
+        <form @submit.prevent="submitComment">
+          <div class="mb-4">
+            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+            <input type="email" id="email" v-model="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+          </div>
+          <div class="mb-4">
+            <label for="comment" class="block text-sm font-medium text-gray-700">Comment</label>
+            <textarea id="comment" v-model="comment" required rows="4" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"></textarea>
+          </div>
+          <button type="submit" class="px-4 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2">Submit</button>
+        </form>
+      </div>
     </div>
   </header>
 </template>
@@ -37,7 +51,18 @@ export default {
     return {
       expanded: false,
       tab: null,
+      email: '',
+      comment: '',
     };
+  },
+  methods: {
+    submitComment() {
+      // Handle comment submission here
+      console.log('Submitted comment:', this.email, this.comment);
+      // Reset form fields
+      this.email = '';
+      this.comment = '';
+    }
   },
 };
 </script>
