@@ -1,5 +1,14 @@
 [
     {
+        "role": "chat_qna",
+        "content": "{\"status\": \"success\", \"qna\": [{\"question 1\": \"Do you want the pile of rocks background theme to be photo-realistic or stylized/illustrated?\", \"option1\": \"Photo-realistic\", \"option2\": \"Stylized/Illustrated\"}, {\"question 2\": \"Should this background be applied site-wide, impacting all pages, or only on specific sections/pages?\", \"option1\": \"Site-wide\", \"option2\": \"Specific sections/pages\"}], \"input_token_count\": 564, \"output_token_count\": 99, \"time_taken\": \"0:00:03.779235\"}",
+        "message_id": "guest16082024065556",
+        "timestamp": "16082024065605",
+        "component_file_name": "purple_header_component_1723693679",
+        "div_id": "",
+        "div_action": ""
+    },
+    {
         "role": "chat_acknowledge",
         "content": "Got it, working on changing the background to rocks.",
         "message_id": "guest16082024065556",
