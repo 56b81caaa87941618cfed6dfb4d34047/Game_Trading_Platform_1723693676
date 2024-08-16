@@ -26,6 +26,7 @@
           </ul>
         </div>
       </div>
+      <img src="https://raw.githubusercontent.com/56b81caaa87941618cfed6dfb4d34047/Game_Trading_Platform_1723693676/main/images/436f748360c8454fb5fb3e8044a169f0.jpeg" alt="Game Image" class="w-full mt-4" />
     </div>
   </header>
 </template>
